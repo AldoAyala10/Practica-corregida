@@ -8,11 +8,11 @@ class ConectarBD{
     async conectarMySql(){
         try {
             this.conexion=await this.mysql.createConnection({
-                host:process.env.HOSTMYSQL || "bfoafarixp6xzggxrqbu-mysql.services.clever-cloud.com",
-                user:process.env.USERMYSQL || "ukav921s47u8mzcx",
-                password:process.env.PASSWORDMYSQL || "r5eOK6FAuWDiE93R889V",
-                database:process.env.DATABASEMYSQL || "bfoafarixp6xzggxrqbu",
-                port:process.env.PORTMYSQL || 3306
+                host:process.env.HOSTMYSQL,
+                user:process.env.USERMYSQL,
+                password:process.env.PASSWORDMYSQL,
+                database:process.env.DATABASEMYSQL,
+                port:process.env.PORTMYSQL
             });
             console.log("Conectado a MySql");
         } catch (error) {
